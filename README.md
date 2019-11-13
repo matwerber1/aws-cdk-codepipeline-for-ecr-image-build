@@ -14,7 +14,7 @@ This project deploys:
 
 # What is the CDK?
 
-The AWS CDK is a library that is (as of 11/13/2019) GA for Python, Javascript, and Typescript, and is in preview for Java and .Net. You may refer to the [CDK docs](for details), but at a high level, it is an abstraction over CloudFormation that makes it much faster and simpler to write CloudFormation templates. The abstraction requires far fewer lines of code, but behind the scenes still transforms to native CloudFormation templates and stacks.
+The AWS CDK is a library that is (as of 11/13/2019) GA for Python, Javascript, and Typescript, and is in preview for Java and .Net. You may refer to the [CDK docs](for details), but at a high level, it is an abstraction over AWS CloudFormation that makes it much faster and simpler to write CloudFormation templates. The abstraction requires far fewer lines of code, but is still ultimately compiled by the accompanying CDK CLI into native CloudFormation and launched as a standard CloudFormation stack. 
 
 
 # Useful commands
