@@ -88,6 +88,11 @@ export class AwsContainersDemoStack extends cdk.Stack {
       repositoryName: 'container-image-repo'
     });
 
+    /**
+     * I want to add a custom CF resource that commits example files to the CodeCommit repo. 
+     * Maybe will finish this at a later time?
+     */
+    /*
     const fn = new lambda.Function(this, 'initializeCodeRepoFunction', {
       code: lambda.Code.fromAsset(path.join(__dirname, 'lambda/initialize-code-repo')),
       handler: 'index.handler',
@@ -104,27 +109,10 @@ export class AwsContainersDemoStack extends cdk.Stack {
       actions: ['codecommit:*'],         // This could be further scoped down...
       effect: iam.Effect.ALLOW
     }));
-
+  
     const initializeCodeCommitResource = new cloudformation.CustomResource(this, 'InitializeCodeCommitResource', {
       provider: cloudformation.CustomResourceProvider.lambda(fn)
     });
-
-  }
-}
-
-export class test1 extends cdk.Stack {
-  constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
-    super(scope, id, props);
-
-    const fn = new lambda.Function(this, 'initializeCodeRepoFunction', {
-      code: lambda.Code.fromAsset(path.join(__dirname, 'lambda/initialize-code-repo')),
-      handler: 'index.handler',
-      runtime: lambda.Runtime.NODEJS_10_X
-    });
-
-    const initializeCodeCommitResource = new cloudformation.CustomResource(this, 'InitializeCodeCommitResource', {
-      provider: cloudformation.CustomResourceProvider.lambda(fn)
-    });
-
+    */
   }
 }
