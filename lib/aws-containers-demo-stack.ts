@@ -21,7 +21,7 @@ export class AwsContainersDemoStack extends cdk.Stack {
 
       // CodeCommit repository that contains the Dockerfile used to build our ECR image: 
       const code_repo = new codecommit.Repository(this, 'codeRepository', {
-        repositoryName: 'container-image-repo'
+        repositoryName: 'dockerfile-repo'
       });
 
       // Pipeline that triggers on pushes to CodeCommit repo to build our ECR image: 
